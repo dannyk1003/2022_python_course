@@ -1,0 +1,1 @@
+select distinct job from cmdev.emp;
