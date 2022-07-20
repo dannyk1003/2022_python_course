@@ -1,0 +1,1 @@
+select * from cmdev.emp left join cmdev.dept on emp.deptno = dept.deptno;

@@ -1,0 +1,1 @@
+select left("Hello" , 2) , right("Hello" , 2) , substring("Hello" , 3) , substring("Hello" , 3 , 2);

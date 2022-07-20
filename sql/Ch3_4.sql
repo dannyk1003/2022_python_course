@@ -1,0 +1,1 @@
+select concat("Hello","SQL") , concat("1" , "2") , "1" + "2" , concat_ws("#","Hello","SQL"); # concat -> str+str
