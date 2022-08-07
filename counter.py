@@ -1,22 +1,41 @@
-def number():
+def is_number():
+    '''
+    輸入數字並判斷是否為數字
+    '''
     checker = 0
     while checker != 1:
         x = input("enter number:")
-        checker = 0
+        number_len = 0
         for i in x:
             if i not in str(list(range(10))):
                 print("not a number!")
                 break
             else:
-                checker += 1
-        if checker == len(x):
+                number_len += 1
+        if number_len == len(x):
             checker = 1  
     return int(x)
 
 
-def counter():
-    x = number()
+def main():
 
+    x = is_number()
+
+    y = is_operator()
+        
+    z = is_number()
+
+    answer = count_area(x, y, z)
+
+    print(f"{x} {y} {z} = {answer}")
+
+    try_again()
+
+    
+def is_operator():
+    '''
+    輸入運算元並判斷是否為運算元
+    '''
     while True:
         y = input("enter operator:")
         if y == "+":
@@ -31,9 +50,32 @@ def counter():
             break
         else:
             print("not a operator!")
-        
-    z = number()
+    return y
 
+
+def try_again():
+    '''
+    是否要再來一次
+    '''
+    while True:
+        index = input("countinue?(Y/N):")
+        #print(index)
+        #print(index == "N")
+
+        if index.upper() == "N":
+            print("good bye!")
+            break
+        elif index.upper() == "Y":
+            print("U can enter number again~")
+            main()
+        else:
+            print("plz type again~")
+
+
+def count_area(x,y,z):
+    '''
+    計算區
+    '''
     if y == "+":
         answer = x + z
     elif y == "-":
@@ -47,42 +89,6 @@ def counter():
     else:
         answer = "Error"
 
-    print(f"{x} {y} {z} = {answer}")
-    
+    return answer
 
-"""
-switch y:
-    case "+":
-        answer = x + z
-    case "-":
-        answer = x - z
-    case "*":
-        answer = x * z
-    case "/":
-        answer = x / z
-"""
-
-index = 0
-while True:
-    counter()
-
-    while True:
-        index = input("countinue?(Y/N):")
-        #print(index)
-        #print(index == "N")
-
-
-        if index.upper() == "N":
-            print("good bye!")
-            break
-        elif index.upper() == "Y":
-            break
-        else:
-            print("plz type again~")
-    if index.upper() == "Y":
-        continue
-    break
-
-
-        
-
+main()
