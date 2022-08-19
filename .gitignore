@@ -1,0 +1,12 @@
+*.jpg
+/sql
+/.vscode
+/__pycache__
+*.csv  
+*.json  
+*.txt  
+*.bak
+*.sqlite3
+*.pickle
+*.dir
+*.dat

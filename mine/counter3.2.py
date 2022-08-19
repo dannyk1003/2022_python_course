@@ -26,8 +26,6 @@ def formula_first_element_is_operator(formula):
 def operator_counter(formula):
     '''
     判斷哪幾個是運算元;
-    x = formula;
-    return = list[ ]
     '''
     op_counter = []
     for i, formula_element in enumerate(list(formula)):
@@ -108,7 +106,10 @@ def parentheses_count(formula):
         return False 
 
 
-def parentheses_inside(formula):  
+def parentheses_inside(formula): 
+    '''
+    計算括弧內的結果
+    ''' 
     while is_parentheses_exists(formula):
         op_list = operator_list(formula)
         op_counter = operator_counter(formula)

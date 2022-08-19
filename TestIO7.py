@@ -1,0 +1,1 @@
+print('Hello!!!', file = open('hello2.txt', 'w'))

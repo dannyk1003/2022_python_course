@@ -100,7 +100,7 @@ def operator_list(operator_count, formula): # x = operator_count [3, 6], y = for
     return op_list #["+","+"]
 
 
-def calculater(number, operator_count, formula): #number, operator_count, formula
+def calculator(number, operator_count, formula): #number, operator_count, formula
     '''
     計算區
     '''
@@ -110,6 +110,8 @@ def calculater(number, operator_count, formula): #number, operator_count, formul
     #op_list = first_priority(operator_count, op_list, formula)[1]
     #op_list = operator_list(operator_count, formula)
     answer = number[0]
+    if op_list == []:
+        return answer
   
     #print(operator_list)
     for i in range(0, len(op_list)):
@@ -141,7 +143,9 @@ def formula_first_element_is_operator(formula):
     '''
     如果formula第一個元素是運算元,則在formula前面補0
     '''
-    if operator_counter(formula)[0] == 0: # formula 第一個值是運算元,則補0
+    if operator_counter(formula) == []: # formula 沒有運算元
+        return "0+" + formula
+    elif operator_counter(formula)[0] == 0: # formula 第一個值是運算元,則補0
         return "0" + formula
     else:
         return formula
@@ -152,7 +156,7 @@ def try_again():
     是否要再來一次
     '''
     while True:
-        index = input("countinue?(Y/N):")
+        index = input("continue?(Y/N):")
         #print(index)
         #print(index == "N")
 
@@ -210,12 +214,12 @@ def main():
     #operator_count = [3,6]
     number = number_counter(formula, operator_count) 
     #number = [123,45,6]
-    answer = calculater(number, operator_count, formula) 
+    answer = calculator(number, operator_count, formula) 
     #answer = 174
     print(f"{formula} = {answer}") 
     #print : "123+45+6 = 174"
     try_again() 
-    #print : "countinue?(Y/N):"
+    #print : "continue?(Y/N):"
 
 
 main()
