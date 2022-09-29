@@ -1,1 +1,0 @@
-select * from cmdev.emp where ename like "S____";  #_*4

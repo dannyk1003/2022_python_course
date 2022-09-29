@@ -1,1 +1,0 @@
-select pi() , pow(2,10) , rand() , sqrt(9);

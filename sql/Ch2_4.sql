@@ -1,1 +1,0 @@
-select ename, salary, salary*12, salary*12 + salary div 2 as "annual salary1", salary*12 + salary/2 as "annual salary2", salary*12.5 as "annual salary3" from cmdev.emp;

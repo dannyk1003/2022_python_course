@@ -1,1 +1,0 @@
-select floor(salary*12 + salary div 2) from cmdev.emp;

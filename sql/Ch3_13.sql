@@ -1,1 +1,0 @@
-select * , quarter(hiredate) from cmdev.emp; # employee hire in which quarter

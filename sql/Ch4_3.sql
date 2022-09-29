@@ -1,1 +1,0 @@
-select * from cmdev.emp join cmdev.dept on emp.deptno = dept.deptno;

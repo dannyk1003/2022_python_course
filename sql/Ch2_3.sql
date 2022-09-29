@@ -1,1 +1,0 @@
-select ename, salary, salary*12, salary*12 + salary div 2 from cmdev.emp;
